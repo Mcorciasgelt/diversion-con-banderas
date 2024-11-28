@@ -62,25 +62,25 @@ const mostrarModal = (pais) => {
     const overlay = document.getElementById("overlay")
     const modal = document.getElementById("country-modal")
 
-    document.getElementById("modal-title").textContent = pais.name.common;
-    document.getElementById("modal-flag").src = pais.flags[1];
-    document.getElementById("modal-flag").alt = `Bandera de ${pais.name.common}`;
-    document.getElementById("modal-capital").textContent = pais.capital ? pais.capital[0] : "No disponible";
+    document.getElementById("modal-title").textContent = pais.name.common
+    document.getElementById("modal-flag").src = pais.flags[1]
+    document.getElementById("modal-flag").alt = `Bandera de ${pais.name.common}`
+    document.getElementById("modal-capital").textContent = pais.capital ? pais.capital[0] : "No disponible"
     document.getElementById("modal-population").textContent = pais.population.toLocaleString();
-    document.getElementById("modal-side").textContent = pais.car ? pais.car.side : "No disponible";
+    document.getElementById("modal-side").textContent = pais.car ? pais.car.side : "No disponible"
 
-    overlay.style.display = "block";
-    modal.style.display = "block";
+    overlay.style.display = "block"
+    modal.style.display = "block"
 
-    document.getElementById("close-modal").addEventListener("click", cerrarModal);
+    document.getElementById("close-modal").addEventListener("click", cerrarModal)
 
-    overlay.addEventListener("click", cerrarModal);
+    overlay.addEventListener("click", cerrarModal)
 }
 
 
 const cerrarModal = () => {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("country-modal").style.display = "none";
+    document.getElementById("overlay").style.display = "none"
+    document.getElementById("country-modal").style.display = "none"
   }
 
 
